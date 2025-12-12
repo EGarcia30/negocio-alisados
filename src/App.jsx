@@ -6,7 +6,7 @@ const HairSmoothingLanding = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState({});
 
-  const whatsappNumber = '50312345678'; // Reemplaza con tu número real
+  const whatsappNumber = '50376234887'; // Reemplaza con tu número real
   
   const workImages = [
     'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800',
@@ -65,7 +65,18 @@ const HairSmoothingLanding = () => {
   const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
-  const whatsappMessage = encodeURIComponent('Hola! Me interesa agendar un alisado profesional.');
+  const whatsappMessage = encodeURIComponent(`
+  ¡Hola! 👋 Soy Josselin de Josselin Beauty ✨
+  Especialista en alisados brasileños de chocolate y servicios a domicilio en San Salvador.
+
+  ¿En qué puedo ayudarte hoy?
+  ✅ Agendar alisado profesional
+  ✅ Consulta gratis de tu cabello  
+  ✅ Servicio a domicilio
+  ✅ Paquetes especiales
+
+  ¡Cuéntame qué necesitas! 💇‍♀️
+  `);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-amber-50">
