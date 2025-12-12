@@ -65,19 +65,6 @@ const HairSmoothingLanding = () => {
   const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
-  const whatsappMessage = encodeURIComponent(`
-  ¡Hola! 👋 Soy Josselin de Josselin Beauty ✨
-  Especialista en alisados brasileños de chocolate y servicios a domicilio en San Salvador.
-
-  ¿En qué puedo ayudarte hoy?
-  ✅ Agendar alisado profesional
-  ✅ Consulta gratis de tu cabello  
-  ✅ Servicio a domicilio
-  ✅ Paquetes especiales
-
-  ¡Cuéntame qué necesitas! 💇‍♀️
-  `);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-amber-50">
       {/* Header con Video de Fondo */}
@@ -104,7 +91,7 @@ const HairSmoothingLanding = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-green-500/50 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
@@ -148,7 +135,7 @@ const HairSmoothingLanding = () => {
               Disfruta de nuestro alisado profesional en la comodidad de tu hogar. Llevamos todos los equipos y productos necesarios para brindarte el mejor servicio.
             </p>
             <a 
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hola! Me interesa el servicio a domicilio.')}`}
+              href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
@@ -346,7 +333,7 @@ const HairSmoothingLanding = () => {
                   <h4 className="font-bold text-lg mb-3 text-gray-800">💚 También a Domicilio</h4>
                   <p className="text-gray-600 mb-4">Llevamos nuestro servicio profesional hasta tu casa</p>
                   <a 
-                    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                    href={`https://wa.me/${whatsappNumber}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700 transition-colors"
@@ -423,7 +410,7 @@ const HairSmoothingLanding = () => {
 
       {/* WhatsApp Flotante */}
       <a
-        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+        href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transform hover:scale-110 transition-all duration-300 z-50 animate-pulse"
